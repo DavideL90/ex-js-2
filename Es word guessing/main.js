@@ -8,8 +8,11 @@ while((tentativi < 7) && (inputWord != randomWord)){
   var inputWord = prompt("Inserisci una parola:");
   tentativi++;
   if(tentativi % 2 == 0){
-    var randomLetter = randomWord.charAt((Math.floor((Math.random() * randomWord.length))));
-    alert("Suggerimento! " + randomLetter);
+    var randomNumber = Math.floor(Math.random() * randomWord.length);
+    var randomLetter = randomWord.charAt(randomNumber);
+    var arrayWord = randomWord.split("");
+    var positionLetter = arrayWord.indexOf(randomLetter) + 1;
+    alert("Suggerimento! Lettera: " + randomLetter + " in posizione " + positionLetter);
   }
   console.log(tentativi);
 }
