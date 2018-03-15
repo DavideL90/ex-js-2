@@ -11,7 +11,7 @@ while((tentativi < 7) && (inputWord != randomWord)){
   tentativi++;
   console.log(tentativi);
 }
-if((tentativi < 7) && (inputWord != randomWord)){
+if((tentativi < 7) && (inputWord == randomWord)){
   document.write("Hai indovinato! La parola era: " + randomWord);
 }
 else{
