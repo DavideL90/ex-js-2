@@ -1,14 +1,16 @@
 var wordList = ["pasta", "gatto", "atomo", "norvegia"];
 var randomChoice = Math.floor((Math.random() * wordList.length));
-console.log(randomChoice);
 var randomWord = wordList[randomChoice];
-alert("La parola da indovinare è formata da: " + randomWord.length + " caratteri");
 console.log(randomWord);
 var tentativi = 0;
+alert("La parola da indovinare è formata da: " + randomWord.length + " caratteri");
 while((tentativi < 7) && (inputWord != randomWord)){
   var inputWord = prompt("Inserisci una parola:");
-  debugger
   tentativi++;
+  if(tentativi % 2 == 0){
+    var randomLetter = randomWord.charAt((Math.floor((Math.random() * randomWord.length))));
+    alert("Suggerimento! " + randomLetter);
+  }
   console.log(tentativi);
 }
 if((tentativi < 7) || (inputWord == randomWord)){
