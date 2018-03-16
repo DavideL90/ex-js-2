@@ -1,4 +1,4 @@
-var wordList = ["pasta", "gatto", "atomo", "norvegia"];
+var wordList = ["pasta", "gatto", "atomo", "norvegia", "polpo", "cataclisma"];
 var randomChoice = Math.floor((Math.random() * wordList.length));
 var randomWord = wordList[randomChoice];
 console.log(randomWord);
